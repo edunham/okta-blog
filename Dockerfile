@@ -22,7 +22,7 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
 
 # Ruby setup
-RUN gem install bundler
+RUN gem install bundler -v 2.4.22
 
 # App setup
 WORKDIR /app
