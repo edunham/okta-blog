@@ -13,8 +13,8 @@ tweets:
 image: blog/github-actions-graalvm/github-actions-graalvm.png
 type: conversion
 ---
-
 :page-liquid:
+
 :toc: macro
 :experimental:
 
@@ -25,8 +25,9 @@ I experienced this recently with link:/blog/2022/03/03/spring-native-jhipster[Sp
 After a few days of euphoria, I thought it'd be easy to create native builds for each operating system (Linux, macOS, and Windows) using GitHub Actions. I was wrong.
 
 If you'd like to follow along and learn how to configure GitHub Actions to create native binaries, you'll need a few prerequisites.
-
+++++
 {% include integrator-org-warning.html %}
+++++
 
 *Prerequisites*:
 
