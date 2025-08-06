@@ -23,6 +23,8 @@ And if you've done much work with web apps, you also probably know how hard it c
 
 In this tutorial, I'll show you how to create a React app that uses Redux for state management, how to secure your application using Okta, and how to decode the JWT in the client to make authorization decisions without relying on another call to the server. You'll be able to use the token's payload in order to determine what type of access to permit to a user. For this app, I'll just have you build a search bar for a set of users.
 
+{% include integrator-org-warning.html %}
+
 ## What is Redux?
 
 Redux is a state management tool that helps keep your app organized. While it can be used on its own or with another view library, it's quite commonly used with React. You might not need it in your app, and there are some downsides to using it, but it also has many advantages. It would be worth weighing the pros and cons before deciding on using it for your app.
@@ -330,7 +332,7 @@ export default () => (
 
 Go ahead and give it a whirl! You should be able to search through a set of (fake) users, select one, choose another, etc.
 
-{% img blog/react-redux-jwt/select-a-user.gif alt:"Select a User" width:"800" %}{: .center-image }
+{% img blog/react-jwt/select-a-user.gif alt:"Select a User" width:"800" %}{: .center-image }
 
 ## Add Authentication to React with okta
 
@@ -785,7 +787,7 @@ export default connect(mapStateToProps)(Header);
 
 When the app first loads, the user state starts out as `null` and Okta needs to do some work in the background to get you a token. In the meantime, you display a spinner with `<Loader active inline />`. If you're logged out, you get a link to sign in. If you're already logged in, it displays your name with a dropdown option to log back out. To help you out, if you're logged in as an Admin it'll tell you right in the header.
 
-{% img blog/react-redux-jwt/admins-vs-everyone.gif alt:"Admins vs Everyone" width:"800" %}{: .center-image }
+{% img blog/react-jwt/admins-vs-everyone.gif alt:"Admins vs Everyone" width:"800" %}{: .center-image }
 
 ### Bonus Tip
 
