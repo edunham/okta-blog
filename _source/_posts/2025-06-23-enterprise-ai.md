@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: "Integrate Your Enterprise AI Tools with Cross-App Access"
-author: [semona-igama]
+author: semona-igama
 by: advocate
 communities: [devops,security,mobile,.net,java,javascript,go,php,python,ruby]
 description: "Manage user and non-human identities, including AI in the enterprise with Cross App Access"
@@ -68,6 +68,8 @@ Let's go through it step by step. For this example, we'll use the following enti
 
 ### Single Sign-On
 First, Agent0 gets the user to sign in using a standard OpenID Connect (or SAML) flow in order to obtain an ID token. There isn't anything unique to this spec regarding this first stage, so we will skip the details of the OpenID Connect flow, and we'll start with the ID token as the input to the next step.
+
+> ⚠️ **Note:** Cross App Access is currently an Okta **Early Access (EA) feature** and SAML with Cross App Access is not yet supported at this stage.
 
 ### Token exchange
 Agent0, the requesting application, then makes a Token Exchange request (RFC 8693) to the IdP's token endpoint with the following parameters:
